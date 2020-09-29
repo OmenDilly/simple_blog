@@ -1,0 +1,40 @@
+@import vars
+@import button 
+
+
+.nav
+	display: grid
+	grid-template-columns: 1fr 1fr
+	padding: 10px 20px
+	user-select: none
+
+	.logo
+		display: grid
+		grid-template-columns: 50px auto
+		align-self: center
+		justify-items: start
+		.sirqle
+			height: 50px
+			width: 50px
+			line-height: 50px
+			text-decoration: none
+			font-weight: 700
+			font-size: 35px
+			text-align: center
+			border-radius: 50%
+			color: $light
+			transition: all .3s
+			background-color: $secondary
+			&:hover + .text
+					border-radius: 0
+					transform: translateX(0)
+					opacity: 1
+		.text
+			margin-left: 5px
+			align-self: center
+			font-weight: 700
+			font-size: 25px
+			color: $secondary
+			transition: all .3s
+			transform: translateX(-20px)
+			opacity: 0
