@@ -3,16 +3,7 @@ import { useQuery, gql } from '@apollo/client'
 import { Post } from './Post'
 import '../styles/index.sass'
 
-const PageQueryOptions = {
-    "options": {
-        "paginate": {
-        "page": 1,
-        "limit": 1
-        }
-    }
-}
-
-const BOOKS = gql`
+const POSTS = gql`
     query (
         $options: PageQueryOptions
     ) {
@@ -23,7 +14,7 @@ const BOOKS = gql`
             body
             }
         }
-        album (id: 10) {
+        album (id: 1) {
             photos (options: $options) {
             data {
                 id
@@ -37,7 +28,7 @@ const BOOKS = gql`
 
 export const PostList = () => {
 
-    const { loading, error, data } = useQuery(BOOKS, {
+    const { loading, error, data } = useQuery(POSTS, {
         variables: {
             "options": {
                 "paginate": {
@@ -48,8 +39,6 @@ export const PostList = () => {
         }
 
     })
-
-    console.log(data)
 
     const displayPosts = () => {
         if (loading) {

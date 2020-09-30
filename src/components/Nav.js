@@ -1,26 +1,23 @@
 import React, {useCallback, useContext} from 'react'
-import { 
-    NavLink
-} from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import { MyContext } from '../App'
-
-// const Button = (action, title) => {
-
-// }
 
 export const Nav = () => {
 
     const user = useContext(MyContext)
     const {userId, setUserId} = user
 
-    const handleClick = useCallback( async (value) => {
-        await setUserId(value)
+    const handleClick = useCallback((value) => {
+        setUserId(value)
     }, [userId])
 
     return (
         <div className='nav'>
             <div className='logo nav__item'>
-                <NavLink to='/' className='sirqle'>
+                <NavLink 
+                    to='/' 
+                    className='sirqle'
+                >
                     S
                 </NavLink>
                 <span className='text'>

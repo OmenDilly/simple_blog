@@ -8,8 +8,8 @@ export const SignIn = () => {
     const user = useContext(MyContext)
     const {userId, setUserId} = user
 
-    const handleClick = useCallback( async (value) => {
-        await setUserId(value)
+    const handleClick = useCallback((value) => {
+        setUserId(value)
     }, [userId])
 
     return (

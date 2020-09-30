@@ -2,13 +2,21 @@
 
 .post__item
 	display: grid
-	grid-template-columns: minmax(100px, 200px) auto
+	grid-template-columns: minmax(100px, 200px) minmax(50%, 100%)
 	align-items: center
 	justify-items: start
 	transition: all .3s ease-in-out
 	border-radius: $radius
 	text-decoration: none
 	background-color: $light
+	animation: post__appear .5s 1 ease-in-out
+	@keyframes post__appear
+		0%
+			opacity: 0
+		100%
+			opacity: 1
+	@media screen and ( max-width: $xs )
+		grid-template-columns: auto
 	&:hover
 		box-shadow: 0px 30px 18px -26px rgba(0,0,0,0.30)
 		transform: scale(1.02) translateY(-2px)
@@ -27,8 +35,20 @@
 		align-self: start
 		padding-right: 20px
 		font-weight: 600
+		@media screen and ( max-width: $xs )
+			padding-left: 20px
 		.post__title
 			color: $fontPrimary
+			@media screen and ( min-width: $xs )
+				overflow: hidden
+				display: -webkit-box
+				-webkit-box-orient: vertical
+				-webkit-line-clamp: 1
 		.post__body
 			color: $fontSecondary
+			@media screen and ( min-width: $xs )
+				overflow: hidden
+				display: -webkit-box
+				-webkit-box-orient: vertical
+				-webkit-line-clamp: 4
 		

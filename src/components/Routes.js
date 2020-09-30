@@ -1,10 +1,5 @@
-import React, {useContext} from 'react'
-import {
-    Switch,
-    Route,
-    Redirect
-} from 'react-router-dom'
-import { MyContext } from '../App'
+import React from 'react'
+import { Switch, Route, Redirect } from 'react-router-dom'
 import { PostDetails } from './PostDetails'
 import { PostList } from './PostList'
 import { SignIn } from './SignIn'

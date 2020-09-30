@@ -8,13 +8,16 @@
 	justify-items: stretch
 	overflow: hidden
 	padding: 2% 10%
-	grid-row-gap: 20px
+	gap: 20px
+	@media screen and ( max-width: $xs )
+		padding: 2% 5%
 	.loading
 		background-color: $secondary
 		justify-self: center
 		width: 100px
 		height: 5px
-		animation: load__blink .8s infinite cubic-bezier(0, 0, 1, 1)
+		border-radius: $radius
+		animation: load__blink .8s infinite linear
 		@keyframes load__blink
 			0%
 				opacity: 0
