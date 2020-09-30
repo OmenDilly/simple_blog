@@ -1,7 +1,7 @@
 import React from 'react'
 // import { useParams } from 'react-router-dom'
 // import { useQuery, gql } from '@apollo/client'
-import '../styles/index.sass'
+import '../styles/index.css'
 
 // const POST = gql`
 //     query (

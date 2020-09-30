@@ -1,7 +1,7 @@
 import React, {useContext, useCallback} from 'react'
 import { NavLink } from 'react-router-dom'
 import { MyContext } from '../App'
-import '../styles/index.sass'
+import '../styles/index.css'
 
 export const SignIn = () => {
 

@@ -1,6 +1,7 @@
 import React, {useCallback, useContext} from 'react'
 import { NavLink } from 'react-router-dom'
 import { MyContext } from '../App'
+import '../styles/index.css'
 
 export const Nav = () => {
 

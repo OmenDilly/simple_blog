@@ -3,7 +3,7 @@ import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client'
 import { useRoutes } from './components/Routes'
 import { Nav } from './components/Nav'
 import { BrowserRouter as Router } from 'react-router-dom'
-import './styles/index.sass'
+import './styles/index.css'
 
 export const MyContext = createContext()
 

@@ -1,7 +1,7 @@
 import React from 'react'
 import { useQuery, gql } from '@apollo/client'
 import { Post } from './Post'
-import '../styles/index.sass'
+import '../styles/index.css'
 
 const POSTS = gql`
     query (
