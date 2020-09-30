@@ -6,6 +6,26 @@
 	align-self: center
 	justify-self: center
 	justify-items: stretch
+	overflow: hidden
 	padding: 2% 10%
 	grid-row-gap: 20px
+	.loading
+		background-color: $secondary
+		justify-self: center
+		width: 100px
+		height: 5px
+		animation: load__blink .8s infinite cubic-bezier(0, 0, 1, 1)
+		@keyframes load__blink
+			0%
+				opacity: 0
+				transform: translateX(-700px) scale(.1, .1)
+			50%
+				opacity: 1
+				width: 100px
+				transform: translateX(0px) scale(2, 1)
+			100%
+				opacity: 0
+				width: 10px
+				transform: translateX(700px) scale(.1, .1)
+				
 	

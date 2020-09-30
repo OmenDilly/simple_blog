@@ -5,16 +5,16 @@
 	grid-template-columns: minmax(100px, 200px) auto
 	align-items: center
 	justify-items: start
-	transition: all .3s
+	transition: all .3s ease-in-out
 	border-radius: $radius
-	// border: .5px solid $fontSecondary
+	text-decoration: none
 	background-color: $light
-	// box-shadow: 1px 2px 3px 2px $dark
-	gap: 20px
 	&:hover
-		// background-color: lighten($primary, 20)
 		box-shadow: 0px 30px 18px -26px rgba(0,0,0,0.30)
 		transform: scale(1.02) translateY(-2px)
+	&:active
+		transform: scale(1) translateY(0)
+		box-shadow: none
 	.post__image
 		display: grid
 		padding: 20px
@@ -26,4 +26,9 @@
 	.post__content
 		align-self: start
 		padding-right: 20px
+		font-weight: 600
+		.post__title
+			color: $fontPrimary
+		.post__body
+			color: $fontSecondary
 		

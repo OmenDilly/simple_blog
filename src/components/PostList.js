@@ -54,7 +54,7 @@ export const PostList = () => {
     const displayPosts = () => {
         if (loading) {
             return (
-                <div className="loading">Loading</div>
+                <div className="loading"></div>
             )
         } else {
             return (
